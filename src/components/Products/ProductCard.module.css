@@ -1,0 +1,123 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px clamp(16px, 4vw, 48px);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-family: "Simplon Norm", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 88px;
+  }
+  
+  .leftSection {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .itemCount {
+    font-weight: bold;
+    color: #252020;
+  }
+  
+  .filterToggle {
+    color: #827d8c;
+    cursor: pointer;
+    font-weight: 400;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .arrow {
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  .arrow img {
+    transform: rotate(90deg); /* Arrow pointing left */
+  }
+  
+  .sortSection {
+    font-weight: bold;
+    color: #252020;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .dropdownIcon {
+    font-size: 12px;
+  }
+  
+  .dropdownIcon img {
+    transform: rotate(0deg); /* Arrow pointing down */
+  }
+
+  .mobileFilter {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    color: #252020;
+  }
+  
+  .mobileFilterText {
+    cursor: pointer;
+  }
+
+  .verticalDivider {
+    color: #ccc;
+    display: none;
+  }
+  
+  /* 🔽 Mobile styles */
+  @media (max-width: 768px) {
+    .toolbar {
+      height: 41px;
+      font-size: 12px;
+    }
+    .arrow {
+        font-size: 16px;
+      }
+      .dropdownIcon {
+        font-size: 10px;
+      }
+  
+    .leftSection {
+        display: none;
+    }
+  
+    .mobileFilter {
+        display: flex;
+      }
+    
+      .sortSection {
+        font-size: 14px;
+      }
+      .verticalDivider {
+        color: #ccc;
+        display: initial;
+      }
+
+  }
+
+  @media (max-width: 480px)   {
+    .toolbar {
+        font-size: 10px;
+      }
+      .arrow {
+        font-size: 14px;
+      }
+      .dropdownIcon {
+        font-size: 8px;
+      }
+      .sortSection {
+        font-size: 12px;
+      }
+   }
+  
