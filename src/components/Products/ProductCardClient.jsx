@@ -4,6 +4,8 @@ import styles from './ProductCardClient.module.css';
 
 const ProductCardClient = ({ products }) => {
   const [showFilter, setShowFilter] = useState(true);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
 
   return (
     <div className={styles.pageContainer}>
@@ -26,20 +28,26 @@ const ProductCardClient = ({ products }) => {
       </div>
 
       <div className={styles.contentWrapper}>
-        {showFilter && (
-          <aside className={styles.filterSidebar}>
-            <div className={styles.checkbox}>
-              <input type="checkbox" />
-              <label>Customizable</label>
-            </div>
-            {['IDEAL FOR', 'OCCASION', 'WORK', 'FABRIC', 'SEGMENT', 'SUITABLE FOR', 'RAW MATERIALS', 'PATTERN'].map(title => (
-              <div key={title} className={styles.filterSection}>
-                <div className={styles.sectionTitle}>{title}</div>
-                <div className={styles.sectionValue}>All</div>
-              </div>
-            ))}
-          </aside>
-        )}
+      {showFilter && (
+  <aside className={`${styles.filterSidebar} ${isMobile ? styles.mobileFilterSidebar : ''}`}>
+    {isMobile && (
+      <div className={styles.filterClose} onClick={() => setShowFilter(false)}>
+        ✕ Close
+      </div>
+    )}
+    <div className={styles.checkbox}>
+      <input type="checkbox" />
+      <label>Customizable</label>
+    </div>
+    {['IDEAL FOR', 'OCCASION', 'WORK', 'FABRIC', 'SEGMENT', 'SUITABLE FOR', 'RAW MATERIALS', 'PATTERN'].map(title => (
+      <div key={title} className={styles.filterSection}>
+        <div className={styles.sectionTitle}>{title}</div>
+        <div className={styles.sectionValue}>All</div>
+      </div>
+    ))}
+  </aside>
+)}
+
         <section className={styles.productGrid} style={{ width: showFilter ? 'calc(100% - 250px)' : '100%' }}>
           {products.map(product => (
 <div key={product.id} className={styles.card}>
