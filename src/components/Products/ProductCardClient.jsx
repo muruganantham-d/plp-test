@@ -39,12 +39,21 @@ const ProductCardClient = ({ products }) => {
       <input type="checkbox" />
       <label>Customizable</label>
     </div>
-    {['IDEAL FOR', 'OCCASION', 'WORK', 'FABRIC', 'SEGMENT', 'SUITABLE FOR', 'RAW MATERIALS', 'PATTERN'].map(title => (
-      <div key={title} className={styles.filterSection}>
-        <div className={styles.sectionTitle}>{title}</div>
-        <div className={styles.sectionValue}>All</div>
-      </div>
-    ))}
+    {[
+  'IDEAL FOR', 'OCCASION', 'WORK', 'FABRIC',
+  'SEGMENT', 'SUITABLE FOR', 'RAW MATERIALS', 'PATTERN'
+].map(title => (
+  <div key={title} className={styles.filterSection}>
+    <div className={styles.sectionTitle}>
+      {title}
+      <span className={styles.dropdownIcon}>
+        <img src="/arrow-left.svg" alt="dropdown" />
+      </span>
+    </div>
+    <div className={styles.sectionValue}>All</div>
+  </div>
+))}
+
   </aside>
 )}
 
