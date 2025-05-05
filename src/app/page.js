@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Content from "@/components/content/Content";
 import ProductCard from "@/components/Products/ProductCard";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <Content/>
           <ProductCard/>
       </div>
+      <Footer/>
     </>
   );
 }

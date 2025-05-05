@@ -1,11 +1,13 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './ProductCardClient.module.css';
+import { useUser, SignInButton, SignedOut, SignedIn,  ClerkLoaded } from '@clerk/nextjs';
 
 const ProductCardClient = ({ products }) => {
   const [showFilter, setShowFilter] = useState(true);
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 823;
-
+  console.log(products,"pppppppp");
+  const { isSignedIn } = useUser();
 
   return (
     <div className={styles.pageContainer}>
@@ -74,9 +76,22 @@ const ProductCardClient = ({ products }) => {
     >
       {product.title}
     </div>
-    <div className={styles.signInText}>
+    {/* <div className={styles.signInText}>
       <a href="#">Sign in</a> or Create an account to see pricing
-    </div>
+    </div> */}
+    <ClerkLoaded>
+          {isSignedIn ? (
+        <p className={styles.price}>${product.price}</p>
+      ) : (
+        <div className={styles.signInText}>
+          <SignInButton mode="modal">
+            <span style={{ cursor: 'pointer', color: 'blue' }}>Sign in</span>
+          </SignInButton>{' '}
+          or Create an account to see pricing
+        </div>
+      )}
+      </ClerkLoaded>
+
   </div>
   <div className={styles.wishlistIcon}><img src="/heart.svg" alt="Heart Icon" /></div>
 </div>

@@ -123,6 +123,51 @@
   margin-top: 32px;
 }
 
+/* /////////// */
+.profileModal {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 25%;
+  min-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  z-index: 999;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.userInfo {
+  margin-bottom: 12px;
+}
+
+.logoutBtn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
 
   .header {

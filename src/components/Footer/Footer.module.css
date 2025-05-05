@@ -1,0 +1,209 @@
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 2rem 4.5rem;
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+  }
+  
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .newsletter {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+  }
+  
+  .contactSection {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .sectionTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .sectionSubtitle {
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+  }
+  
+  .emailInput {
+    display: flex;
+    width: 100%;
+  }
+  
+  .inputField {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.9rem;
+    color: #000;
+  }
+  
+  .subscribeButton {
+    padding: 0.8rem 1.5rem;
+    background-color: #000;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #333;
+    margin: 1.5rem 0;
+  }
+  
+  .footerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footerSection {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactInfo, .currency {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .currencyTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  .currencyNote {
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    line-height: 1.4;
+    opacity: 0.8;
+  }
+  
+  .doubleColumnLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .singleColumnLinks, .column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .singleColumnLinks a, .column a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+    opacity: 0.8;
+  }
+  
+  .singleColumnLinks a:hover, .column a:hover {
+    opacity: 1;
+  }
+  
+  .socialIcons {
+    margin-bottom: 1.5rem;
+  }
+  
+  .socialIcons span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .paymentMethods {
+    margin-top: 1rem;
+  }
+  
+  .paymentMethods span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .paymentIcons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .paymentIcons span {
+    background-color: #333;
+    color: #FFFFFF;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+    opacity: 0.6;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .topSection {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .newsletter, .contactSection {
+      max-width: 100%;
+    }
+  
+    .footerContent {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .emailInput {
+      flex-direction: column;
+    }
+  
+    .inputField {
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+  
+    .subscribeButton {
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footerContent {
+      grid-template-columns: 1fr;
+    }
+  
+    .doubleColumnLinks {
+      grid-template-columns: 1fr;
+    }
+  }
