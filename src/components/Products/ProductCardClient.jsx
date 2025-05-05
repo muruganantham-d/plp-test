@@ -42,16 +42,28 @@ const ProductCardClient = ({ products }) => {
         )}
         <section className={styles.productGrid} style={{ width: showFilter ? 'calc(100% - 250px)' : '100%' }}>
           {products.map(product => (
-            <div key={product.id} className={styles.card}>
-              <div className={styles.imageWrapper}>
-                <img src={product.image} alt={product.title} className={styles.productImage} />
-              </div>
-              <div className={styles.productName}>{product.title}</div>
-              <div className={styles.signInText}>
-                <a href="#">Sign in</a> or Create an account to see pricing
-              </div>
-              <div className={styles.wishlistIcon}>♡</div>
-            </div>
+<div key={product.id} className={styles.card}>
+  <div className={styles.imageWrapper}>
+    <img
+      src={product.image}
+      alt={product.title}
+      className={styles.productImage}
+    />
+  </div>
+  <div className={styles.productInfo}>
+    <div
+      className={styles.productName}
+      title={product.title}
+    >
+      {product.title}
+    </div>
+    <div className={styles.signInText}>
+      <a href="#">Sign in</a> or Create an account to see pricing
+    </div>
+  </div>
+  <div className={styles.wishlistIcon}><img src="/heart.svg" alt="Heart Icon" /></div>
+</div>
+
           ))}
         </section>
       </div>
