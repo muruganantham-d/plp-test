@@ -74,6 +74,90 @@
     color: #ccc;
     display: none;
   }
+
+
+
+  /*  */
+  .contentWrapper {
+    display: flex;
+    padding: 1rem 2rem;
+  }
+  
+  .filterSidebar {
+    width: 250px;
+    padding-right: 1rem;
+    border-right: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .checkbox {
+    margin-bottom: 1rem;
+  }
+  
+  .filterSection {
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .sectionValue {
+    color: gray;
+  }
+  
+  .productGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-left: 2rem;
+    flex: 1;
+  }
+  
+  .card {
+    position: relative;
+    border: 1px solid #eee;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .statusTag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+  }
+  
+  .productImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .productName {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signInText {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .wishlistIcon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
   
   /* 🔽 Mobile styles */
   @media (max-width: 768px) {
@@ -120,4 +204,12 @@
         font-size: 12px;
       }
    }
+  
+
+   .productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    flex: 1;
+  }
   
