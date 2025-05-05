@@ -33,7 +33,7 @@
 @media (max-width: 768px) {
     .content {
       /* padding: 40px 20px; */
-      padding: 0px 16px 0px 16px;
+      padding: 16px 16px 0px 16px;
       
     }
     .content_header {

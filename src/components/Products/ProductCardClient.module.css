@@ -179,11 +179,12 @@
     letter-spacing: 0;
   }
   
+
   .productGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 2rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     flex: 1;
   }
   
@@ -280,67 +281,128 @@
     cursor: pointer;
   }
 
-  .productGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 2rem;
-    padding-left: 2rem;
-    flex: 1;
-  }
   
 
   
   /* Mobile styles */
   @media (max-width: 768px) {
     .toolbar {
-      height: 41px;
+      height: 48px;
       font-size: 12px;
+      padding: 10px 16px;
     }
-    .arrow {
-        font-size: 16px;
-      }
-      .dropdownIcon {
-        font-size: 10px;
-      }
   
     .leftSection {
-        display: none;
+      display: none;
     }
   
     .mobileFilter {
-        display: flex;
-      }
-    
-      .sortSection {
-        font-size: 14px;
-      }
-      .verticalDivider {
-        color: #ccc;
-        display: initial;
-      }
-      @media (max-width: 768px) {
-        .card {
-          max-width: 100%;
-          width: 100%;
-          height: auto;
-        }
-      }
-      
+      display: flex;
+      font-size: 12px;
+    }
+  
+    .sortSection {
+      font-size: 13px;
+    }
+  
+    .arrow {
+      font-size: 14px;
+    }
+  
+    .dropdownIcon {
+      font-size: 10px;
+    }
+  
+    .card {
+      width: 100%;
+      height: auto;
+      padding: 8px;
+    }
+  
+    .imageWrapper {
+      height: auto;
+      padding: 10px;
+    }
+  
+    .productName {
+      font-size: 14px;
+    }
+  
+    .signInText {
+      font-size: 10px;
+    }
+  
+    .filterSidebar {
+      width: 200px;
+      padding-right: 0.5rem;
+    }
+  
+    .checkbox label,
+    .sectionTitle,
+    .sectionValue {
+      font-size: 14px;
+    }
 
+    .contentWrapper {
+      padding: 1rem 1rem;
+    }
   }
+  
 
-  @media (max-width: 480px)   {
+  @media (max-width: 480px) {
     .toolbar {
-        font-size: 10px;
-      }
-      .arrow {
-        font-size: 14px;
-      }
-      .dropdownIcon {
-        font-size: 8px;
-      }
-      .sortSection {
-        font-size: 12px;
-      }
-   }
+      height: 40px;
+      font-size: 10px;
+      padding: 8px 12px;
+    }
+  
+    .arrow {
+      font-size: 12px;
+    }
+  
+    .dropdownIcon {
+      font-size: 8px;
+    }
+  
+    .sortSection {
+      font-size: 11px;
+    }
+  
+    .productName {
+      font-size: 12px;
+    }
+  
+    .signInText {
+      font-size: 9px;
+    }
+  
+    .checkbox label,
+    .sectionTitle,
+    .sectionValue {
+      font-size: 12px;
+    }
+  
+    .filterSidebar {
+      width: 160px;
+    }
+  
+    .imageWrapper {
+      padding: 8px;
+    }
+  
+    .card {
+      padding: 6px;
+    }
+    .contentWrapper {
+      padding: 1rem 0rem;
+    }
+  }
+  
+
+   @media (min-width: 375px) and (max-width: 823px) {
+    .productGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
   

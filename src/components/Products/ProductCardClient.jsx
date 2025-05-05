@@ -4,7 +4,7 @@ import styles from './ProductCardClient.module.css';
 
 const ProductCardClient = ({ products }) => {
   const [showFilter, setShowFilter] = useState(true);
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 823;
 
 
   return (
