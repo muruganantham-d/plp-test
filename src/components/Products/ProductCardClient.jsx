@@ -6,7 +6,6 @@ import { useUser, SignInButton, SignedOut, SignedIn,  ClerkLoaded } from '@clerk
 const ProductCardClient = ({ products }) => {
   const [showFilter, setShowFilter] = useState(true);
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 823;
-  console.log(products,"pppppppp");
   const { isSignedIn } = useUser();
 
   return (
