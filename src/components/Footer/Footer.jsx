@@ -21,7 +21,7 @@ const Footer = () => {
           <p className={styles.contactInfo}>customercare@mettamus.e.com</p>
           
           <h4 className={styles.currencyTitle}>CURRENCY</h4>
-          <p className={styles.currency}><strong>USD</strong></p>
+          <p className={styles.currency}>   <img className={styles.usaFlag} src="/footer/usaFlag.svg" alt="FlagLogo" /><strong>USD</strong></p>
           <p className={styles.currencyNote}>Transactions will be completed in Euros and a currency reference is available on heret.</p>
         </div>
       </div>
@@ -33,15 +33,16 @@ const Footer = () => {
         {/* Mettā Muse Links */}
         <div className={styles.footerSection}>
           <h4 className={styles.sectionTitle}>mettā muse</h4>
-          <div className={styles.doubleColumnLinks}>
-            <div className={styles.column}>
+          {/* <div className={styles.doubleColumnLinks}> */}
+          <div className={styles.singleColumnLinks}>
+            {/* <div className={styles.column}> */}
               <a href="#">About Us</a>
               <a href="#">Stories</a>
               <a href="#">Artisans</a>
               <a href="#">Boutiques</a>
               <a href="#">Contact Us</a>
               <a href="#">EU Compliances Docs</a>
-            </div>
+            {/* </div> */}
           </div>
         </div>
 
@@ -63,16 +64,20 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h4 className={styles.sectionTitle}>FOLLOW US</h4>
           <div className={styles.socialIcons}>
-            <span>m</span>
+          <img className={styles.instaIcons} src="/footer/insta.svg" alt="Insta Logo"/>
+          <img src="/footer/linkedin.svg" alt="linkedin Logo"/>
           </div>
           
           <h4 className={styles.sectionTitle}>mettā muse ACCEPTS</h4>
           <div className={styles.paymentMethods}>
             <span>Pay</span>
             <div className={styles.paymentIcons}>
-              <span>AVEREX</span>
-              <span>Pay</span>
-              <span>Pay</span>
+              <span><img src="/footer/gpay.svg" alt="gpay"/> </span>
+              <span><img src="/footer/master.svg" alt="master"/> </span>
+              <span><img src="/footer/paypal.svg" alt="paypal"/> </span>
+              <span><img  className={styles.amex} src="/footer/amex.svg" alt="amex"/> </span>
+              <span><img src="/footer/applePay.svg" alt="applepay"/> </span>
+              <span><img  className={styles.opay} src="/footer/opay.svg" alt="opay"/> </span>
             </div>
           </div>
         </div>
