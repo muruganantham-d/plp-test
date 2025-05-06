@@ -64,7 +64,7 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h4 className={styles.sectionTitle}>FOLLOW US</h4>
           <div className={styles.socialIcons}>
-          <img className={styles.instaIcons} src="/footer/insta.svg" alt="Insta Logo"/>
+          <img className={styles.instaIcons} src="/footer/Insta.svg" alt="Insta Logo"/>
           <img src="/footer/linkedin.svg" alt="linkedin Logo"/>
           </div>
           
